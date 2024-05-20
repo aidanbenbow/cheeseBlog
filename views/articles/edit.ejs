@@ -1,0 +1,19 @@
+<div class="container">
+    <form action="/articles/<%= article.id%>?_method=PUT" method="post" enctype="multipart/form-data">
+    <div class="articletitle">
+        <label for="title">Title</label>
+        <input value="<%=article.title%>" type="text" name="title" id="article-title">
+    </div>
+
+    <label for="pic">pic</label>
+    <input type="file" name="pic" id="pic">
+
+    <div class="article-text">
+        <label for="text">Text</label>
+        <textarea name="text" id="text" >
+            <%=article.text%>
+        </textarea>
+    </div>
+<button type="submit">update</button>
+</form>
+</div>

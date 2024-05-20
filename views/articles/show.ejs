@@ -1,0 +1,13 @@
+<h1><%= article.title%></h1>
+<div class="created">
+    <%= article.createdAt.toLocaleDateString()%>
+</div>
+
+<div class="article-pic">
+    
+    <img src="<%= article.pic%>" alt="cheese-pic">
+</div>
+
+<div class="cheese-text">
+   <%- article.sanitisedHtml %>
+</div>

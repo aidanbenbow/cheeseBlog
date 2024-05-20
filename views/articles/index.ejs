@@ -1,0 +1,26 @@
+<div class="newArticle">
+    <a href="articles/new">new Article</a>
+</div>
+
+<div class="articles">
+    
+<% articles.forEach( art =>{%>
+    <div class="art-title">
+ 
+    <%= art.title %>
+  
+    <a href="articles/<%= art.id%>">
+        read more
+    </a>
+    <a href="articles/<%= art.id%>/edit">
+        edit
+    </a>
+<form action="/articles/<%= art.id%>?_method=DELETE" method="post">
+    <button type="submit">Delete</button>
+</form>
+    </div>
+<% }) %>
+        
+
+ 
+</div>

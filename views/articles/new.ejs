@@ -1,0 +1,23 @@
+<div class="container">
+    <form action="/articles" method="post" enctype="multipart/form-data">
+    <div class="articletitle">
+        <label for="title">Title</label>
+        <input value="<%=article.title%>" type="text" name="title" id="article-title">
+    </div>
+
+<div class="article-pic">
+    <label for="pic">Pic</label>
+    <input type="file" name="pic" id="article-pic">
+</div>
+
+    <div class="article-text">
+        <label for="text">Text</label>
+        <textarea name="text" id="article-text" >
+            <%=article.text%>
+        </textarea>
+    </div>
+    <div class="article-save-btn">
+<button type="submit" id="article-btn">save</button>
+</div>
+</form>
+</div>
